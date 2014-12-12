@@ -1,6 +1,6 @@
-var fs = require('fs');
-var fileName="hellofile.txt";
-var textToWrite= "Hello World";
+var fs= require('fs');
+var randomWords = require('random-words');
 
-fs.appendFile(fileName, textToWrite + '\n', function () {
-  console.log("File " + fileName + " had text' " + textToWrite + "'appended");
+fs.appendFile('random.txt', randomWords({ min: 3, max: 10 }) + "\n", function (err){
+console.log("Random text added.")});
+
